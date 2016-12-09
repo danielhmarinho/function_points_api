@@ -1,0 +1,8 @@
+execute 'apt-get update'
+package 'vim'
+package 'postgresql'
+package 'git'
+package'build-essential patch'
+package 'ruby-dev'
+package 'zlib1g-dev'
+package 'liblzma-dev'
