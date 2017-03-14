@@ -12,21 +12,14 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "ideegeo/debian-sid"
   config.vm.network "forwarded_port", guest: 3000, host: 4568
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
   # config.vm.box_check_update = false
 
-  config.vm.provision "chef_zero" do |chef|
-     chef.add_recipe "api"
-     # Specify the local paths where Chef data is stored
-     chef.cookbooks_path = "cookbooks"
-     chef.data_bags_path = "data_bags"
-     chef.nodes_path = "nodes"
-     chef.roles_path = "roles"
-   end
+
 
 
   # Create a forwarded port mapping which allows access to a specific port

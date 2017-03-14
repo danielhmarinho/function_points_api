@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161207172139) do
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
+    t.text     "address"
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
